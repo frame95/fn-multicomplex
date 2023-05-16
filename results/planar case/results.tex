@@ -1,0 +1,118 @@
+\documentclass{article}[12pt]
+\usepackage{mathtools}
+\usepackage[mathscr]{euscript}
+\usepackage{natbib}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz-cd}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}    
+\usepackage{amsmath, amssymb, amsthm, mathabx}
+
+\begin{document}
+TO CORRECT: there are missing $Y_3, Y_4$ in the middle, plus the terms coming from $D_0$ that have $\partial Y_3, \partial Y_4$.
+\section*{Planar case}
+A general term with $i<_1 j <_1 k$ has the form $\Gamma = Y_1|X_1 iX_2| X_3 j X_4 |X_5 k X_6 | Y_2$, where $Y_i$'s are clouds of $<_1$ and $X_j$'s are clouds of $<_2$.Denoting by $\partial Y_i$ the summands of $D_0 Y_i$ in which we split a cloud of $<_2$ belonging to $Y_i$, we have the following formulas:
+
+\begin{align*}
+D_1^iD_2^{jk}(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2\\ 
+ & +Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\end{align*}
+
+\begin{align*}
+D_1^jD_2^{ik}(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\end{align*}
+
+\begin{align*}
+D_1^kD_2^{ij}(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_5kX_6|Y_2\end{align*}
+
+\begin{align*}
+D_2^{ij}D_1^k(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_5kX_6|Y_2\end{align*}
+
+\begin{align*}
+D_2^{ik}D_1^j(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2\end{align*}
+
+\begin{align*}
+D_2^{jk}D_1^i(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2\\ 
+ & +Y_1|X_1iX_2|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2\end{align*}
+
+\begin{align*}
+D_0 D_3^{ijk}(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =\partial Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5X_6|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|\partial Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|X_5X_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||\partial Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_5kX_6|Y_2||Y_1|X_3jX_4|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|Y_2||Y_1|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5X_6|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|\partial Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|X_5X_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_3X_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3X_4|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_1X_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1X_2|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|Y_2||Y_1|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_3X_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3X_4|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_1X_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1X_2|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\end{align*}
+
+\begin{align*}
+D_3^{ijk}D_0(Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2)& =\partial Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5X_6|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|\partial Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|X_5X_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||\partial Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5X_6|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|\partial Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|X_5X_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_3X_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3X_4|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_1X_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1X_2|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3jX_4|X_3X_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_3X_4|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1iX_2|X_1X_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\\ 
+ & +Y_1|X_1X_2|X_1iX_2|X_3jX_4|X_5kX_6|Y_2||Y_1|X_1iX_2|X_3jX_4|X_5kX_6|Y_2\end{align*}
+ 
+ \end{document}
