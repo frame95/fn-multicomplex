@@ -1,0 +1,38 @@
+\documentclass{article}[12pt]
+\usepackage{mathtools}
+\usepackage[mathscr]{euscript}
+\usepackage{natbib}
+\usepackage[margin=1in]{geometry}
+\usepackage{tikz-cd}
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}    
+\usepackage{amsmath, amssymb, amsthm, mathabx}
+
+\begin{document}
+\section*{Aligned degenerate case}
+In this case we only have two indices $i<j$. We suppose WLOG $i <j$ with respect to the order of $\Gamma$, so that we can write $\Gamma = Y_1|X_1iX_2jX_3|Y_2$, with the usual convention for clouds of points. Then we have:
+
+\begin{align*}
+D_1^iD_2^{ij}(Y_1|X_1iX_2jX_3|Y_2)& =Y_1|X_1iX_2(j+2)X_3|Y_2||Y_1|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2X_3|X_1X_2(j+3)X_3|Y_2\\
+& +Y_1|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2(j+2)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|X_1X_2(j+3)X_3|Y_2 \\
+& +Y_1|X_1iX_2X_3|Y_2||Y_1|X_1X_2(j+2)X_3|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2(j+3)X_3|Y_2 \\
+& +Y_1|X_1X_2(j+2)X_3|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2(j+3)X_3|Y_2\end{align*}
+
+\begin{align*}
+D_2^{i,j+1}D_1^i(Y_1|X_1iX_2jX_3|Y_2)& =Y_1|X_1iX_2(j+2)X_3|Y_2||Y_1|X_1(i+1)X_2X_3|X_1X_2(j+3)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|Y_2 \\\
+& +Y_1|X_1X_2(j+2)X_3|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2(j+3)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|Y_2\end{align*}
+
+\begin{align*}
+D_2^{i+1,j+1}D_1^i(Y_1|X_1iX_2jX_3|Y_2)& =Y_1|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2(j+2)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|X_1X_2(j+3)X_3|Y_2 \\
+& +Y_1|X_1iX_2X_3|Y_2||Y_1|X_1X_2(j+2)X_3|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2(j+3)X_3|Y_2\end{align*}
+
+\begin{align*}
+D_1^{i+1}D_2^{ij}(Y_1|X_1iX_2jX_3|Y_2)& =Y_1|X_1iX_2(j+2)X_3|Y_2||Y_1|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2X_3|X_1X_2(j+3)X_3|Y_2\\
+& +Y_1|X_1iX_2(j+2)X_3|Y_2||Y_1|X_1(i+1)X_2X_3|X_1X_2(j+3)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|Y_2 \\
+& +Y_1|X_1X_2(j+2)X_3|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2(j+3)X_3|Y_2||Y_1|X_1(i+2)X_2X_3|Y_2 \\
+& +Y_1|X_1X_2(j+2)X_3|X_1iX_2X_3|Y_2||Y_1|X_1(i+1)X_2X_3|Y_2||Y_1|X_1(i+2)X_2(j+3)X_3|Y_2\end{align*}
+
+\end{document}
+
