@@ -12,4 +12,5 @@ Term2 = ..
 
 You can use Ctrl-F on each file to check each summand appears
 an even number of times. If you prefer, you can also download
-and compile it to have a more readable format.
+the pdf to have a more readable format, despite Ctrl-F works
+better for the non-compiled version.
