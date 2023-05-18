@@ -1,7 +1,7 @@
 **HOW TO READ THE COMPUTATIONS**
 
 Checking the multicomplex equation up to degree 3
-requires several long cases. We grouped them in folders and 
+required several long cases. We grouped them in folders and 
 placed in separated files. Each file is a tex with format:
 
 TITLE
