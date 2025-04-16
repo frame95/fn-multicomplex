@@ -22,7 +22,7 @@ p=ip8(p);
 d2=triald2fn3(vas(:,1:6),vas(:,7:11));
 [Ierr,perr]=recofox(d2);
 perr=ip8(perr);
-compl=agg([I',p'],[Ierr',perr']); 
+compl=agg([I',p'],[Ierr',perr']);  
 Icompl=compl(:,1)'; 
 pcompl=compl(:,2)';
 [Ib,Jb,pb,ib,jb]= fn3ter(8,10); 
@@ -52,9 +52,26 @@ vettore1=cambiobase([dev1 quanto1],Msinha);
 vettoretot=xor(vettore,vettore1);
 bou105=bousfield(10,5);
 bou95=bousfield(9,5);
-%bitrango32(bou95);
-%bitrango32([bou95 vettoretot;]);
-save tutto.mat
+ra0=bitrango32(bou95);
+ra1=bitrango32([bou95 vettoretot;]);
+C=corde(9,5); %checks non triviality projecting to Emb from here
+v1=recog(cat(3,[3 4 5 7 9; 2 1 2 6 8] ,[3 4 5 7 9; 1 1 2 6 8  ]),C); 
+v2=recog( [4 5  6  8  9; 1  3  2  7 7]     ,C); 
+v3= recog( [2 3 5 7 9; 1 1 4 6 8]  ,C); 
+v4=recog(  [3 4 6 7 9; 1 2 5 5 8] ,C); 
+K=ker(bousfield(8,4));
+piuc=piucorda;
+v5(2520)=0; 
+v6(2520)=0; 
+v7(2520)=0; 
+v5(piuc(K(:,22)))=1; 
+v6(piuc(K(:,30)))=1;
+v7(piuc(K(:,32)))=1; 
+M=[bou95 v1' v2' v3' v4' v5' v6' v7'];
+ra2=bitrango32(M);
+ra3=bitrango32([M vettoretot']);
+
+
 
 
 
