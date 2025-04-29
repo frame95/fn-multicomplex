@@ -11,9 +11,14 @@
 \usepackage{amsmath, amssymb, amsthm, mathabx}
 
 \begin{document}
-TO CORRECT: terms in $D_0$ that splits a 2-cloud in one part without constants are missing.
 \section*{Aligned case}
- A general term with $i<_2 j <_2 k$ has the form $\Gamma = Y_1|X_1 iX_2 j X_3 k X_4 | Y_2$, where $Y_i$'s are clouds of $<_1$ and $X_j$'s are clouds of $<_2$.Denoting by $\partial Y_i$ the summands of $D_0 Y_i$ in which we split a cloud of $<_2$ belonging to $Y_i$, we have the following formulas:
+ A general term with $i<_2 j <_2 k$ has the form $\Gamma = Y_1|X_1 iX_2 j X_3 k X_4 | Y_2$, where $Y_i$'s are clouds of $<_1$ and $X_j$'s are clouds of $<_2$. We denote by $\partial Y_i$ the summands of $D_0 Y_i$ in which we split a cloud of $<_2$ belonging to $Y_i$.
+ 
+ When we apply the differential $D_3$ to a monomial, the derived variables cannot be simply doubled, as Fox monomials can contain only one derived variable. This issue can be addressed by imposing a "splitting rule" for monomials containing more than one derived variable. One can verify that the following equation makes the two sides equal for any evaluation, providing a way to resolve double derivations:
+$$ M_1|\partial Y_i | M_2 | \partial Y_i |M_3 = M_1|\partial Y_i | M_2 | Y_i |M_3 + M_1|Y_i | M_2 | \partial Y_i |M_3 $$
+This is a consequence of the fact that $D_0(M||N)=D_0(M)||N + M||D_0(N)$. 
+
+Putting all together, we have the following formulas:
 \begin{align*}
 D_1^iD_2^{jk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
@@ -134,8 +139,32 @@ D_2^{jk}D_1^i(Y_1|X_1iX_2jX_3kX_4|Y_2)& =Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1X_2jX_3
  & +Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2\\ 
  & +Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2\end{align*}
 
+
+
+ 
 \begin{align*}
-D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
+& D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2) =\\
+& = Y_1|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
+& + Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+ & + Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\
+  & + Y_1|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\  
+  & + Y_1|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\
+   & + Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\
+  & + Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\
+ & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2\\ 
+  & + Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|Y_2\\ 
+  & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2\\ 
+ & + Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|Y_2\\ 
+& + \partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
@@ -157,6 +186,9 @@ D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_
  & +Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1X_2X_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+\end{align*}
+
+\begin{align*} 
  & +Y_1|X_1iX_2jX_3kX_4|\partial Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3kX_4|Y_2||\partial Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
@@ -170,7 +202,7 @@ D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_
  & +Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
- & +Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+ & +Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\
  & +Y_1|X_1iX_2X_3X_4|X_1X_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
@@ -196,7 +228,10 @@ D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_
  & +Y_1|X_1X_2jX_3X_4|X_1X_2X_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1X_2jX_3kX_4|\partial Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\ 
  & +Y_1|X_1X_2jX_3kX_4|Y_2||\partial Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\ 
- & +Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+ & +Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\
+    \end{align*}
+
+\begin{align*} 
  & +Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\ 
  & +Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|\partial Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\ 
@@ -241,7 +276,28 @@ D_0 D_3^{ijk}(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_
  & +Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2\end{align*}
 
 \begin{align*}
-D_3^{ijk}D_0(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
+& D_3^{ijk}D_0(Y_1|X_1iX_2jX_3kX_4|Y_2) =\\
+& =Y_1|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
+& +Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+ & + Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\
+  & + Y_1|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\  
+  & + Y_1|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\
+   & + Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2\\
+  & + Y_1|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2jX_3kX_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|Y_2\\ 
+ & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
+  & + Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|Y_2\\
+ & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2\\ 
+  & + Y_1|X_1X_2X_3kX_4|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|Y_2\\ 
+  & + Y_1|Y_2||Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2\\ 
+ & + Y_1|X_1X_2X_3kX_4|X_1X_2jX_3X_4|X_1iX_2X_3X_4|Y_2||Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|Y_2\\ 
+& +\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3kX_4|Y_2||Y_1|X_1X_2jX_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
  & +\partial Y_1|X_1X_2jX_3X_4|X_1iX_2X_3kX_4|Y_2||Y_1|X_1iX_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
@@ -261,6 +317,9 @@ D_3^{ijk}D_0(Y_1|X_1iX_2jX_3kX_4|Y_2)& =\partial Y_1|X_1iX_2jX_3X_4|Y_2||Y_1|X_1
  & +Y_1|X_1iX_2jX_3kX_4|Y_2||\partial Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|\partial Y_2\\ 
  & +Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3X_4|X_1X_2X_3kX_4|Y_2\\ 
+   \end{align*}
+
+\begin{align*}
  & +Y_1|X_1iX_2X_3X_4|X_1X_2X_3kX_4|X_1X_2jX_3X_4|Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|\partial Y_2||Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 
  & +Y_1|X_1iX_2X_3kX_4|X_1X_2jX_3X_4|Y_2||\partial Y_1|X_1iX_2X_3X_4|X_1X_2jX_3kX_4|Y_2\\ 

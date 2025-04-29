@@ -11,26 +11,29 @@
 \usepackage{amsmath, amssymb, amsthm, mathabx}
 
 \begin{document}
-TO CORRECT: there is a missing $Y_3$ in the middle that must simply be adjoined to all terms, plus adding the $\partial Y_3$ terms to $D_0$.
 \section*{Planar degenerate case}
- Consider again two indices $i<j$. We suppose WLOG $i <j$ with respect to the order of $\Gamma$, so that we can write $\Gamma = Y_1|X_1iX_2|X_3jX_4|Y_2$, with the usual convention for clouds of points. Then we have:
+ Consider again two indices $i<j$. We suppose WLOG $i <j$ with respect to the order of $\Gamma$, so that we can write $\Gamma = Y_1|X_1iX_2|Y_2|X_3jX_4|Y_3$, with the usual convention for clouds of points. Then we have:
 
 \begin{align*}
-D_1^iD_2^{ij}(Y_1|X_1iX_2|X_3jX_4|Y_2)& =Y_1| X_1iX_2|X_3(j+2)X_4|Y_2|| Y_1| X_1(i+1) X_2|Y_2 || Y_1|X_1(i+2)X_2|X_3(j+3)X_4|Y_2 \\
-& +Y_1| X_1iX_2|Y_2 || Y_1| X_1(i+1)X_2|X_3(j+2)X_4|Y_2|| Y_1|X_1(i+2)X_2|X_3(j+3)X_4|Y_2
+& D_1^iD_2^{ij}(Y_1|X_1iX_2|Y_2|X_3jX_4|Y_3) =\\
+&=Y_1| X_1iX_2|Y_2|X_3(j+2)X_4|Y_3|| Y_1| X_1(i+1) X_2|Y_2|Y_3 || Y_1|X_1(i+2)X_2|Y_2|X_3(j+3)X_4|Y_3 \\
+& +Y_1| X_1iX_2|Y_2|Y_3 || Y_1| X_1(i+1)X_2|Y_2|X_3(j+2)X_4|Y_3|| Y_1|X_1(i+2)X_2|Y_2|X_3(j+3)X_4|Y_3
 \end{align*}
 
 \begin{align*}
-D_2^{i,j+1}D_1^i(Y_1|X_1iX_2|X_3jX_4|Y_2)& = Y_1|X_1iX_2|X_3(j+2)X_4|Y_2 ||Y_1|X_1(i+1)X_2|X_3(j+3)X_4|Y_2||Y_1|X_1(i+2)X_2|Y_2
+& D_2^{i,j+1}D_1^i(Y_1|X_1iX_2|Y_2|X_3jX_4|Y_3) = \\
+& =Y_1|X_1iX_2|Y_2|X_3(j+2)X_4|Y_3 ||Y_1|X_1(i+1)X_2|Y_2|X_3(j+3)X_4|Y_3||Y_1|X_1(i+2)X_2|Y_2|Y_3
 \end{align*}
 
 \begin{align*}
-D_2^{i+1,j+1}D_1^i(Y_1|X_1iX_2|X_3jX_4|Y_2)& =Y_1|X_1iX_2|Y_2|| Y_1|X_1(i+1)X_2|X_3(j+2)X_4|Y_2 ||Y_1|X_1(i+2)X_2|X_3(j+3)X_4|Y_2
+& D_2^{i+1,j+1}D_1^i(Y_1|X_1iX_2|Y_2|X_3jX_4|Y_3) =\\
+& =Y_1|X_1iX_2|Y_2|Y_3|| Y_1|X_1(i+1)X_2|Y_2|X_3(j+2)X_4|Y_3 ||Y_1|X_1(i+2)X_2|Y_2|X_3(j+3)X_4|Y_3
 \end{align*}
 
 \begin{align*}
-D_1^{i+1}D_2^{ij}(Y_1|X_1iX_2jX_3|Y_2)& =Y_1| X_1iX_2|X_3(j+2)X_4|Y_2|| Y_1| X_1(i+1) X_2|Y_2 || Y_1|X_1(i+2)X_2|X_3(j+3)X_4|Y_2\\
-& + Y_1|X_1iX_2|X_3(j+2)X_4|Y_2 ||Y_1|X_1(i+1)X_2|X_3(j+3)X_4|Y_2||Y_1|X_1(i+2)X_2|Y_2
+& D_1^{i+1}D_2^{ij}(Y_1|X_1iX_2jX_3|Y_3) =\\
+& = Y_1| X_1iX_2|Y_2|X_3(j+2)X_4|Y_3|| Y_1| X_1(i+1) X_2|Y_2|Y_3 || Y_1|X_1(i+2)X_2|Y_2|X_3(j+3)X_4|Y_3\\
+& + Y_1|X_1iX_2|Y_2|X_3(j+2)X_4|Y_3 ||Y_1|X_1(i+1)X_2|Y_2|X_3(j+3)X_4|Y_3||Y_1|X_1(i+2)X_2|Y_2|Y_3
 \end{align*}
 
 
